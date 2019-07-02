@@ -10,11 +10,17 @@ $(document).ready(function(){
         dots: true,
 		prevArrow: '<li class="box__arrow box__arrow--right "></li>',
         nextArrow:'<li class="box__arrow box__arrow--left "></li>' ,
-     
-
-
-
-	});
+         responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }]
+     	});
 
     // head__slider
 
@@ -25,10 +31,7 @@ $(document).ready(function(){
     arrows: false,
        
         dots: true,
-     
-
-
-
+    
   });
 
 
