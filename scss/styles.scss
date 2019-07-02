@@ -253,6 +253,7 @@ body{
 	}
 	
 	&__scroll{
+		& a{
 		border: 1px #fff solid;
 		height: 60px;
 		width: 60px;
@@ -261,14 +262,15 @@ body{
 		margin: 0 auto;
 		@include my_pos(80%,50%);
 		@include tr(.2s);
-
+			text-decoration: none;
+			color:#fff;
 		&:hover,
 		&:focus,
 		&:active {
               border:double;
 			
 		}
-	}
+	}}
 }
 .projects{
 	height: 200vh;

@@ -247,7 +247,7 @@ body {
     font-size: 2.5rem;
     letter-spacing: 2px;
     padding: 0; }
-  .head__scroll {
+  .head__scroll a {
     border: 1px #fff solid;
     height: 60px;
     width: 60px;
@@ -263,8 +263,10 @@ body {
     transform: translate(-50%, -50%);
     -webkit-transition: 0.2s 0.5s linear;
     -o-transition: 0.2s 0.5s linear;
-    transition: 0.2s 0.5s linear; }
-    .head__scroll:hover, .head__scroll:focus, .head__scroll:active {
+    transition: 0.2s 0.5s linear;
+    text-decoration: none;
+    color: #fff; }
+    .head__scroll a:hover, .head__scroll a:focus, .head__scroll a:active {
       border: double; }
 
 .projects {
