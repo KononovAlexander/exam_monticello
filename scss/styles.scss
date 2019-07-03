@@ -227,7 +227,7 @@ body {
 		font-size: 8rem;
 		margin: 34rem 0 0;
 		padding: 0 0;
-		@media (max-width: 1200px){
+		@media (max-width: 1400px){
 			margin: 20rem 0 0;
 		}
 	}
@@ -385,14 +385,16 @@ body {
 		text-transform: uppercase;
 		color: #2c4058;
 		text-align: center;
+			font-size: 1.2em;
 		@include tr(.1s);
 
+			@media (max-width: 1400px){
+				font-size: 2rem;
+				padding: 1% 0;
+
+			}
 		& span:first-child {
 			text-transform: uppercase;
-			font-size: 1.2em;
-			@media (max-width: 1200px){
-				font-size: 1.4rem;
-			}
 		}
 		&:hover,
 		&:focus,
@@ -431,11 +433,11 @@ body {
 
 		padding: 0;
 		margin: 0;
-		@include my_pos(100%, 50%);
+		@include my_pos(110%, 50%);
 
 		& li {
 			list-style: none;
-			margin: 0 40px;
+			margin: 0 30px;
 			display: inline-block;
 			@media (max-width: 1200px){
 				margin: 0 20px;
@@ -458,12 +460,12 @@ body {
 
 	& h2 {
 		text-transform: uppercase;
-		padding-top: 10%;
+		padding-top: 5%;
 		font-family: $g_medium;
 		font-size: 4rem;
 		color: #fff;
 		@media (max-width: 1200px){
-			font-size: 3rem;
+			font-size: 2.5rem;
 		}
 
 		&::before {
@@ -472,7 +474,7 @@ body {
 			width: 7%;
 			height: 1px;
 			background-color: #fff;
-			@include my_pos(12%, 50%);
+			@include my_pos(8%, 50%);
 		}
 	}
 
@@ -671,14 +673,16 @@ body {
 		text-transform: uppercase;
 		text-align: center;
 		color: #2c4058;
-		@media (max-width: 1200px){
-			font-size: 1.2rem;
+		@media (max-width: 1400px){
+			font-size: 2rem;
+			padding: 0;
 		}
 		@include tr(.1s);
 
 		& span {
 			text-transform: uppercase;
 			line-height: 4rem;
+
 		}
 
 		& a {
@@ -694,7 +698,7 @@ body {
 	}
 }
 .myMap {
-	outline: 1px red solid;
+	// outline: 1px red solid;
 	position: relative;
 
 	#map {
@@ -702,16 +706,16 @@ body {
 		height: 88vh;
 	}
 	&__info {
-		width: 50%;
 		height: 60%;
-		// min-width: 500px;
+		width: 50%;
 		@include my_pos(90%, 50%);
 		z-index: 2;
 		background-color: #fff;
 		text-align: center;
 		padding-top: 5%;
-		@media (max-width: 1200px){
-			width: 70%;
+		@media (max-width: 1400px){
+			width: 60%;
+			padding-top: 4%;
 		}
 
 		& h2 {
@@ -720,13 +724,18 @@ body {
 			color: #2c4058;
 			letter-spacing: 2px;
 			margin: 2% 0;
+			@media (max-width: 1400px){
+				padding: 0;
+				margin: 0;
+
+			}
 			&::before {
 				content: "";
 				display: inline-block;
 				width: 15%;
 				height: 1px;
 				background-color: #2c4058;
-				@include my_pos(13%, 50%);
+				@include my_pos(8%, 50%);
 			}
 		}
 	}
@@ -735,17 +744,17 @@ body {
 	}
 	&__contacts,
 	&__form {
+		// outline: 1px red solid;
 		display: inline-block;
 		text-align-last: left;
 		font-family: $g_book;
 		width: 45%;
 		padding: 0 4%;
 			font-size: 1.8rem;
-			@media (max-width: 1200px){
+			@media (max-width: 1400px){
 				font-size: 1.4rem;
-				padding:0 2%;
-
 			}
+			
 
 		& span {
 			line-height: 4rem;
@@ -756,26 +765,20 @@ body {
 			color: #000;
 		}
 	}
-	&__userN {
+	&__userN,
+	&__userE  {
+			
+		// top:5%;
 		outline: none;
 		border: none;
 		border-bottom: 1px #000 solid;
-		margin: 15% 0;
+		margin: 5% 0;
 		line-height: 4rem;
 		width: 100%;
 		font-size: 1.6rem;
 
 	}
-	&__userE {
-		outline: none;
-		border: none;
-		border-bottom: 1px #000 solid;
-		font-size: 1.6rem;
-		line-height: 4rem;
-		margin: 10% 0;
-		width: 100%;
 
-	}
 
 	&__userSub {
 		display: block;
@@ -784,6 +787,7 @@ body {
 		width: 120px;
 		position: absolute;
 		right: 9%;
+		bottom:10%;
 		line-height: 4rem;
 		font-size: 1.4rem;
 		padding: 0 35px;
