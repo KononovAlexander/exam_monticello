@@ -72,7 +72,7 @@ body {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		z-index: 20;
+		z-index:1;
 	}
 
 	&__logo {
@@ -92,6 +92,9 @@ body {
 
 		&--menu {
 			width: 40%;
+			@media (max-width: 1400px){
+				width: 60%;
+			}
 
 			& li {
 				list-style: none;
@@ -276,19 +279,17 @@ body {
 		text-transform: uppercase;
 		font-family: $g_bold;
 		font-size: 4rem;
-
-		&::before {
+		&--general{			
+		    &::before {
 			content: "";
 			display: inline-block;
 			width: 7%;
 			height: 1px;
 			background: #000;
 			@include my_pos(-2%, 50%);
+		   }
 		}
-
-
 	}
-
 	&__block {
 		position: relative;
 		height: 45%;
@@ -387,11 +388,17 @@ body {
 		text-transform: uppercase;
 		color: #2c4058;
 		text-align: center;
+			vertical-align: middle;
 		@include tr(.1s);
 
-		& span:first-child {
+		& span {
 			text-transform: uppercase;
-			font-size: 1.2em;
+			font-size: 2.4rem;
+			line-height: 3rem;
+			@media (max-width: 1400px){
+				
+			line-height: 4rem;
+			}
 			@media (max-width: 1200px){
 				font-size: 1.4rem;
 			}
@@ -583,7 +590,7 @@ body {
 				background-repeat: no-repeat;
 				background-position: 55% 50%;
 				background-size: 40%;
-				@include my_pos(40 %, 103%);
+				@include my_pos(40%, 103%);
 			}
 		}
 	}
@@ -827,10 +834,6 @@ body {
 		justify-content: space-between;
 		@include my_pos(40%, 70%);
 	
-		& a {
-				text-decoration: none;
-				color: #fff;
-			}
 		& li {
 			border: 1px #fff solid;
 			display: inline-block;
@@ -842,6 +845,10 @@ body {
 			text-align: center;
 			font-size: 1.5rem;
 			@include tr(.2s);
+		& a {
+				text-decoration: none;
+				color: #fff;
+			}
 
 			&:hover,
 			&:focus,
